@@ -30,7 +30,7 @@ public class Note {
 	 */
 	public Note(String title, String content, Date addedDate) {
 		super();
-		this.id = new Random().nextInt(10000);
+		this.id = new Random().nextInt(100000);
 		this.title = title;
 		this.content = content;
 		this.addedDate = addedDate;
