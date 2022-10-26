@@ -3,6 +3,7 @@ package com.entities;
 import java.util.Date;
 import java.util.Random;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,6 +14,7 @@ public class Note {
 	@Id
 	private int id;
 	private String title;
+	@Column(length = 2000)
 	private String content;
 	private Date addedDate;
 	/**
@@ -58,6 +60,10 @@ public class Note {
 	}
 	public void setAddedDate(Date addedDate) {
 		this.addedDate = addedDate;
+	}
+	@Override
+	public String toString() {
+		return "Note [id=" + id + ", title=" + title + ", content=" + content + ", addedDate=" + addedDate + "]";
 	}
 	
 	
